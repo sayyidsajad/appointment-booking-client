@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking Plugin Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <h2>Test Appointment Booking</h2>
+      <div id="appointment-booking"></div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="plugin.js"></script>
+    <script>
+      AppointmentBookingPlugin.init({
+        apiBaseUrl: CONFIG.API_BASE_URL,
+      });
+    </script>
+  </body>
+</html>

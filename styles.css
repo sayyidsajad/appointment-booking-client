@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #eef2f7, #dbe6f1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  padding: 32px 36px;
+  transition: box-shadow 0.3s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+}
+
+.page-container h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 32px;
+  color: #34495e;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 17px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f9fafb;
+  color: #34495e;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  font-weight: 500;
+}
+
+.booking-form input::placeholder,
+.booking-form select option {
+  color: #a0aec0;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+  background: #fff;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.booking-form button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
+}
+
+.booking-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#message {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  min-height: 22px;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .page-container {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .page-container h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    padding: 12px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .booking-form button {
+    padding: 14px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
