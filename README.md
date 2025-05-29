@@ -37,6 +37,35 @@ You can change this to your deployed backend URL if needed.
 
 You can open `index.html` directly in your browser or serve it using a simple HTTP server.
 
+## Embedding the Plugin on Any Website
+
+Want to use this booking plugin? Here’s how:
+
+### Embed HTML
+
+Paste this in your website where you want the plugin to appear:
+
+```html
+<div class="page-container">
+  <h2>Test Appointment Booking</h2>
+  <div id="appointment-booking"></div>
+</div>
+```
+
+### Include Scripts
+
+Add these before `</body>`:
+
+```html
+<script src="config.js"></script>
+<script src="plugin.js"></script>
+<script>
+  AppointmentBookingPlugin.init({
+    apiBaseUrl: CONFIG.API_BASE_URL,
+  });
+</script>
+```
+
 ## How It Works
 
 - Loads available time slots from the backend using `/api/available-slots?date=YYYY-MM-DD`
@@ -47,4 +76,3 @@ You can open `index.html` directly in your browser or serve it using a simple HT
 
 - HTML5, CSS3
 - Vanilla JavaScript
-
